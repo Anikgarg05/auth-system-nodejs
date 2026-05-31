@@ -1,4 +1,4 @@
-require("dotenv").config({ path: require("path").resolve(__dirname, "../.env") });
+require("dotenv").config();
 console.log("ENV TEST:", process.env.DB_USER);
 
 const mysql = require("mysql2");
