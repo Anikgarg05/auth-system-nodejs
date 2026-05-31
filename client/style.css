@@ -1,0 +1,83 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    height: 100vh;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* CONTAINER */
+.container {
+    background: #ffffff;
+    padding: 35px 30px;
+    border-radius: 12px;
+    width: 320px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* HEADINGS */
+h2 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* INPUT FIELDS */
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 5px rgba(102, 126, 234, 0.5);
+}
+
+/* BUTTON */
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    background: linear-gradient(to right, #667eea, #764ba2);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.03);
+    opacity: 0.9;
+}
+
+/* MESSAGE TEXT */
+#msg {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #444;
+}
+
+/* SEPARATOR (optional styling if you add hr) */
+hr {
+    margin: 20px 0;
+    border: none;
+    height: 1px;
+    background: #ddd;
+}
