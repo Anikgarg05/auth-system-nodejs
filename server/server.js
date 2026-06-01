@@ -5,7 +5,11 @@ const authRoutes = require("./routes/authRoutes");
 const app = express();
 
 // ✅ FIXED CORS (IMPORTANT)
-app.use(cors());
+app.use(cors({
+  origin: "*",
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  allowedHeaders: ["Content-Type"]
+}));
 
 app.use(express.json());
 
