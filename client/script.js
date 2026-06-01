@@ -8,6 +8,8 @@ window.signup = async function () {
     const password = document.getElementById("signupPassword").value;
 
     try {
+        console.log("Sending request...");
+
         const res = await fetch(`${API_URL}/signup`, {
             method: "POST",
             headers: {
@@ -16,12 +18,13 @@ window.signup = async function () {
             body: JSON.stringify({ email, password })
         });
 
+        console.log("Status:", res.status); // 🔥 important
+
         const data = await res.text();
 
         console.log("Response:", data);
         alert(data);
 
-        // clear input after success
         if (data === "Signup successful") {
             document.getElementById("signupEmail").value = "";
             document.getElementById("signupPassword").value = "";
@@ -29,6 +32,7 @@ window.signup = async function () {
 
     } catch (err) {
         console.log("ERROR:", err);
+        alert("Network error - check console");
     }
 };
 
@@ -48,6 +52,8 @@ window.login = async function () {
             },
             body: JSON.stringify({ email, password })
         });
+
+        console.log("Status:", res.status);
 
         const data = await res.text();
 
