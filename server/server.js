@@ -4,15 +4,8 @@ const authRoutes = require("./routes/authRoutes");
 
 const app = express();
 
-// ✅ Middleware
-app.use(cors({
-  origin: [
-    'https://auth-system-nodejs-seven.vercel.app',
-    'http://localhost:5500'
-  ],
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
-  allowedHeaders: ['Content-Type', 'Authorization']
-}));
+// ✅ FIXED CORS (IMPORTANT)
+app.use(cors());
 
 app.use(express.json());
 
